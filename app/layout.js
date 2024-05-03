@@ -13,7 +13,7 @@ export default function RootLayout ({ children }) {
   return (
     <html lang='es' className='flex flex-col-reverse'>
       <body className={inter.className}>
-        <NavBar suppressHydrationWarning />
+        <NavBar />
         {children}
       </body>
     </html>
