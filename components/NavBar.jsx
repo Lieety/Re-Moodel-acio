@@ -3,7 +3,7 @@ import NavButton from "./NavButton"
 
 function NavBar() {
   return(
-    <div>
+    <>
       <nav className="flex items-center justify-start relative h-12 border-b-2 border-b-teal-600">
         <img className="h-12 ml-10" src="./logo.png" alt="logo insti" />
         <ul className=" w-full flex flex-row justify-center font-medium text-sm ">
@@ -22,7 +22,7 @@ function NavBar() {
  
         </ul>
       </nav>
-    </div>
+    </>
   
   )
 }
