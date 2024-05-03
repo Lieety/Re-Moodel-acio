@@ -1,10 +1,12 @@
+import Link from "next/link"
+import { Router } from "next/router"
 
 
 export default function NavButton ({ label, opt }) {
   return (
-
+      
       <li  className="p-4 lg:px-8 group relative flex items-center space-x-1 ">
-            <a className="text-slate-800 hover:text-slate-900 " href="#">{label}</a>
+            <Link className="text-slate-800 hover:text-slate-900 " href={`/pages/${label.toLowerCase()}`}>{label}</Link>
             <ul className="origin-top-right absolute top-full left-1/2 -translate-x-1/2 w-fit border-slate-200 p-2 rounded-lg shadow-xl hidden group-hover:block"
                 >
               {opt.map(e => {
