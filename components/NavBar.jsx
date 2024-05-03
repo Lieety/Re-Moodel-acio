@@ -9,7 +9,7 @@ function NavBar() {
         <ul className=" w-full flex flex-row justify-center font-medium text-sm ">
             <NavButton label="Centre" opt={['Prsentació', 'Estructura organitzativa', 'Documents del centre', 'Contacte']}></NavButton>
             <NavButton label="Alumnat" opt={['ESO', 'Batxillerat', 'Formació Professional']}></NavButton>
-            <NavButton label="Families" opt={["Calendari escolar", 'Llibres de text', 'Pagament sortides', 'Plataforma alexia', 'Família i Escola', "Bloc de l'AMPA", 'Quota de materials i serveis', 'Ordinadors portatils', 'Activitats nàutiques']}></NavButton>
+            <NavButton label="Families" opt={["Calendari escolarr", 'Llibres de text', 'Pagament', 'Plataforma alexia', 'Família i Escola', "Bloc de l'AMPA", 'Quota de materials i serveis', 'Ordinadors portatils', 'Activitats nàutiques']}></NavButton>
             <NavButton label="Serveis" opt={['Secretaria', 'Biblioteca', 'Seguretat i salut', "Consergeria"]}></NavButton>
         </ul>
         <ul className="flex flex-row gap-5 m-9 items-center ">
