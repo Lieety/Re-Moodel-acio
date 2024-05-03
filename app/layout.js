@@ -11,8 +11,8 @@ export const metadata = {
 
 export default function RootLayout ({ children }) {
   return (
-    <html lang='es'>
-      <NavBar />
+    <html lang='es' className='flex flex-col-reverse'>
+      <NavBar suppressHydrationWarning />
       <body className={inter.className}>{children}</body>
     </html>
   )
