@@ -13,11 +13,7 @@ export default function RootLayout ({ children }) {
   return (
     <html lang='es' className='flex flex-col-reverse'>
       <body className={inter.className}>
-<<<<<<< HEAD
-=======
-        <NavBar />
->>>>>>> 3320725774b19cf8eb6b5eca0ccc816fa6457acc
-        {children}
+         {children}
       </body>
     </html>
   )
