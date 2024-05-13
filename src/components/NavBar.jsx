@@ -1,5 +1,4 @@
 'use client'
-
 import Link from "next/link"
 import { redirect } from "next/navigation"
 import { useRouter } from "next/navigation"
@@ -8,7 +7,7 @@ export default function Layout() {
   const router = useRouter()
   return(
     <div className='container'>
-          <header className='d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom'>
+          <header className='d-flex flex-wrap flex-row align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom'>
             <div className='col-md-3 mb-2 mb-md-0 -mr-10'>
               <a
                 href='/'
@@ -57,7 +56,7 @@ export default function Layout() {
                 Login
               </button>
               </Link>
-              <Link href='/loginn?isUser=false'>
+              <Link href='/login?isUser=false'>
               <button type='button' className='btn btn-primary'>
                 Sign-up
               </button>
