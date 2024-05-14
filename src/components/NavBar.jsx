@@ -2,6 +2,8 @@
 import Link from "next/link"
 import { redirect } from "next/navigation"
 import { useRouter } from "next/navigation"
+import '../app/globals.css'
+import 'bootstrap/dist/css/bootstrap.css'
 
 export default function Layout() {
   const router = useRouter()
