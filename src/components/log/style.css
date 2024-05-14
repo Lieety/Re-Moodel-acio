@@ -104,6 +104,39 @@ input {
   width: 100%;
 }
 
+#password {
+  margin: 0;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  border: none;
+  width: 100%;
+  margin: 0px 0px;
+}
+svg {
+  width: 40px;
+}
+
+#showPassword {
+  background: transparent;
+  border: none;
+  color: #333;
+
+  padding: 0;
+  margin: 0;
+}
+
 select {
   background-color: #eee;
   border: none;
