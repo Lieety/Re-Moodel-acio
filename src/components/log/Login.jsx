@@ -23,15 +23,16 @@ export default function Login() {
           <a href="">google</a>
         </div>
         <span>o utiliza tu mail</span>
-        <input type="text" placeholder='nombre' required />
-        <input type="email" placeholder='e-mail' required />
-        <div className="password-container">
+        <input type="text" placeholder='nombre' style={{ width: '100%' }} required />
+        <input type="email" placeholder='e-mail' style={{ width: '100%' }} required />
+        <div className="password-container" style={{ width: '100%' }}>
           <input
             type={showPass ? 'text' : 'password'}
             placeholder='contraseña'
             value={password}
             onChange={handlePasswordChange}
             required
+            style={{ width: '100%' }}
           />
           <div className="show-password-checkbox">
             <input
