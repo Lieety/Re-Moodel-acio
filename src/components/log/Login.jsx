@@ -1,9 +1,19 @@
 'use client'
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import React, { useState } from 'react'
 import './style.css'
 
-export default function Login () {
+export default function Login() {
+  const [showPass, setShowPass] = useState(false);
+  const [password, setPassword] = useState('');
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPass(!showPass);
+  };
+
   return (
     <div className='form-container sign-in-container'>
       <form action="">
@@ -15,7 +25,25 @@ export default function Login () {
         <span>o utiliza tu mail</span>
         <input type="text" placeholder='nombre' required />
         <input type="email" placeholder='e-mail' required />
-        <input type="password" placeholder='contraseña' required />
+        <div className="password-container">
+          <input
+            type={showPass ? 'text' : 'password'}
+            placeholder='contraseña'
+            value={password}
+            onChange={handlePasswordChange}
+            required
+          />
+          <div className="show-password-checkbox">
+            <input
+              type="checkbox"
+              id="showPassword"
+              onChange={togglePasswordVisibility}
+            />
+            <label htmlFor="showPassword">
+              {showPass ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+            </label>
+          </div>
+        </div>
         <input type="submit" value="Log in" />
       </form>
     </div>
