@@ -25,10 +25,11 @@ export default function Login() {
           <a className='social-login' href=""><FaGoogle /></a>
         </div>
         <span>o utiliza tu mail</span>
-        <input type="text" placeholder='nombre' style={{ width: '100%' }} required />
-        <input type="email" placeholder='e-mail' style={{ width: '100%' }} required />
-        <div className="password-container input" style={{ width: '100%' }}>
+        <input className='input' type="text" placeholder='nombre' style={{ width: '100%' }} required />
+        <input className='input' type="email" placeholder='e-mail' style={{ width: '100%' }} required />
+        <div className="password-container" style={{ width: '100%' }}>
           <input
+          className='input'
             type={showPass ? 'text' : 'password'}
             placeholder='contraseña'
             value={password}

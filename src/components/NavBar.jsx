@@ -53,12 +53,12 @@ export default function Layout() {
             </ul>
 
             <div className='col-md-3 text-end'>
-              <Link href='/login?isUser=true'>
+              <Link href='/login'>
               <button type='button' className='btn btn-outline-primary me-2'>
                 Login
               </button>
               </Link>
-              <Link href='/login?isUser=false'>
+              <Link href='/login'>
               <button type='button' className='btn btn-primary'>
                 Sign-up
               </button>
