@@ -11,7 +11,6 @@ export default function LogIn () {
   const isUser = searchParams.get('isUser')
   const [card, setCard] = useState('')
 
-  console.log(isUser)
 
   return (
     <>
