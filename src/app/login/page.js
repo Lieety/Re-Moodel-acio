@@ -14,7 +14,7 @@ export default function LogIn () {
 
   return (
     <>
-      <span className=''>atras</span>
+      <span className=''>atras perquè collons poses atras???</span>
       <body>
         <div className={`container ${card}`} id='container'>
           <Login />
