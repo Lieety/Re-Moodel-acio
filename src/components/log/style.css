@@ -97,6 +97,11 @@ input[type="submit"] {
   transition: transform 80ms ease-in;
   margin-top: 10px;
 }
+
+input[type="submit"]:focus {
+  border: 1px solid #c31432;
+}
+
 button:active {
   transform: scale(0.95);
 }
@@ -148,7 +153,11 @@ input:focus {
   border-bottom: 2px solid #333;
 }
 
-input:focus + span {
+input:active {
+  outline: none;
+}
+
+div > input:focus ~ span {
   border-bottom: 2px solid #333;
 }
 
@@ -162,6 +171,10 @@ svg {
   align-items: center;
   padding: 0px;
   height: 100%;
+}
+
+label:hover {
+  cursor: pointer;
 }
 
 #showPassword {
@@ -232,7 +245,9 @@ select {
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
 }
-
+button:focus {
+  outline: 0;
+}
 .container.right-panel-active .overlay {
   transform: translateX(50%);
 }

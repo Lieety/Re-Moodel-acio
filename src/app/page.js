@@ -1,13 +1,13 @@
-import NavBar from '@/components/NavBar.jsx'
-import Image from 'next/image'
+import Layout from '@/components/NavBar'
 import './globals.css'
-
+import '@/app/layout'
 
 export default function Home () {
   return (
     <>
-      <NavBar />
-      <h1>ZAZA</h1>
+      <Layout>
+        <h1>ZAZA</h1>
+      </Layout>
     </>
   )
 }

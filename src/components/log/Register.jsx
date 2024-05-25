@@ -2,9 +2,15 @@
 import React, { useState } from 'react'
 import './style.css'
 import { FaRegEyeSlash, FaRegEye, FaFacebook, FaGoogle } from "react-icons/fa";
+import { useForm } from "react-hook-form";
 
 
 export default function Register () {
+  const { register, handleSubmit, formState: { errors } } = useForm()
+
+  const onSubmit = data => {
+    console.log(data)
+  }
   const [showPass, setShowPass] = useState(false);
   const [password, setPassword] = useState('');
 
@@ -18,17 +24,18 @@ export default function Register () {
   };
   return (
     <div className='form-container sign-up-container'>
-      <form action="" className=''>
+      <form action="" className='' onSubmit={handleSubmit(onSubmit)}>
         <h1>Crear cuenta</h1>
         <div className='social-container'>
         <a className='social-login' href=""><FaFacebook /></a>
           <a className='social-login' href=""><FaGoogle /></a>
         </div>
         <span>o utiliza tu mail</span>
-        <input className='input' type="text" placeholder='nombre' required />
-        <input className='input' type="email" placeholder='e-mail' required />
+        <input {...register('name')} className='input' type="text" placeholder='nombre' required />
+        <input {...register('e-mail')} className='input' type="email" placeholder='e-mail' required />
         <div className="password-container" style={{ width: '100%' }}>
           <input
+          {...register('password')}
           className='input'
             type={showPass ? 'text' : 'password'}
             placeholder='contraseña'
@@ -50,7 +57,7 @@ export default function Register () {
             
           </span>
         </div>
-        <select className='input' name="role" id="role" >
+        <select {...register('role')} className='input' name="role" id="role" >
           <option value="Profesor">Profesor/a</option>
           <option value="Alumno">Alumno/a</option>
           <option value="Gestor">Gestor/a</option>
