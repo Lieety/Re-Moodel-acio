@@ -1,4 +1,4 @@
-import { connectMongoDB } from "@/libs/mongodb";
+import { connectMongoDB } from "@/libs/mongodb.js";
 import { NextRequest, NextResponse } from "next/server";
 import { messages } from "@/utils/messages";
 
