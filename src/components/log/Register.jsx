@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 export default function Register () {
   const { register, handleSubmit, formState: { errors } } = useForm()
 
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     console.log(data)
   }
   const [showPass, setShowPass] = useState(false);
@@ -23,7 +23,7 @@ export default function Register () {
     setShowPass(!showPass);
   };
   return (
-    <div className='form-container sign-up-container'>
+    <section className='form-container sign-up-container'>
       <form action="" className='' onSubmit={handleSubmit(onSubmit)}>
         <h1>Crear cuenta</h1>
         <div className='social-container'>
@@ -64,6 +64,6 @@ export default function Register () {
         </select>
         <input type="submit" value="Sign up" />
       </form>
-    </div>
+    </section>
   )
 }

@@ -1,5 +1,5 @@
 import NavBar from '@/components/NavBar'
-import 'C:/Users/guill/TR/remoodleacio/src/components/log/style.css'
+import '@/components/log/style.css'
 
 export const metadata = {
   title: 'b',

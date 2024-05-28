@@ -26,7 +26,7 @@ export default function Login() {
   };
 
   return (
-    <div className='form-container sign-in-container'>
+    <section className='form-container sign-in-container'>
       <form action="" onSubmit={ handleSubmit(onSubmit)}>
         <h1>Iniciar sesión</h1>
         <div className='social-container'>
@@ -34,8 +34,6 @@ export default function Login() {
           <a className='social-login' href=""><FaGoogle /></a>
         </div>
         <span>o utiliza tu mail</span>
-        <input {...register('name', { required: true})} className='input' type="text" placeholder='nombre' style={{ width: '100%' }}  />
-        <span className=' text-xs text-red-800'>{errors?.password?.type === 'required'&& 'El nombre es obligatorio'}</span>
         <input {...register('e-mail', { required: true})} className='input' type="email" placeholder='e-mail' style={{ width: '100%' }}  />
         <span className=' text-xs text-red-800'>{errors?.password?.type === 'required'&& 'El correo es obligatorio'}</span>
         <div className="password-container" style={{ width: '100%' }}>
@@ -66,6 +64,6 @@ export default function Login() {
         <span className=' text-xs text-red-800'>{errors?.password?.type === 'required'&& 'La contraseña es obligatoria'}</span>
         <input type="submit" value="Log in" />
       </form>
-    </div>
+    </section>
   )
 }
