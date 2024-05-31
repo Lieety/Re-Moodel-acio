@@ -3,14 +3,24 @@ import React, { useState } from 'react'
 import './style.css'
 import { FaRegEyeSlash, FaRegEye, FaFacebook, FaGoogle } from "react-icons/fa";
 import {useForm} from 'react-hook-form'
+import axios from 'axios';
 
 
 export default function Login() {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
 
-  const onSubmit = data => {
-    console.log(data)
+  const onSubmit = ({mail, password}) => {
+    axios.post('/api/auth/login', {
+      mail,
+      password
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   const [showPass, setShowPass] = useState(false);
@@ -34,7 +44,7 @@ export default function Login() {
           <a className='social-login' href=""><FaGoogle /></a>
         </div>
         <span>o utiliza tu mail</span>
-        <input {...register('e-mail', { required: true})} className='input' type="email" placeholder='e-mail' style={{ width: '100%' }}  />
+        <input {...register('mail', { required: true})} className='input' type="email" placeholder='e-mail' style={{ width: '100%' }}  />
         <span className=' text-xs text-red-800'>{errors?.password?.type === 'required'&& 'El correo es obligatorio'}</span>
         <div className="password-container" style={{ width: '100%' }}>
           <input

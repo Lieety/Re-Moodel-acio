@@ -3,13 +3,25 @@ import React, { useState } from 'react'
 import './style.css'
 import { FaRegEyeSlash, FaRegEye, FaFacebook, FaGoogle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
+import axios from 'axios';
 
 
 export default function Register () {
   const { register, handleSubmit, formState: { errors } } = useForm()
 
-  const onSubmit = (data) => {
-    console.log(data)
+  const onSubmit = ({name, mail, password, role}) => {
+    axios.post('/api/auth/register', {
+      name,
+      mail,
+      password,
+      role
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
   const [showPass, setShowPass] = useState(false);
   const [password, setPassword] = useState('');
@@ -32,7 +44,7 @@ export default function Register () {
         </div>
         <span>o utiliza tu mail</span>
         <input {...register('name')} className='input' type="text" placeholder='nombre' required />
-        <input {...register('e-mail')} className='input' type="email" placeholder='e-mail' required />
+        <input {...register('mail')} className='input' type="email" placeholder='e-mail' required />
         <div className="password-container" style={{ width: '100%' }}>
           <input
           {...register('password')}
@@ -58,9 +70,9 @@ export default function Register () {
           </span>
         </div>
         <select {...register('role')} className='input' name="role" id="role" >
-          <option value="Profesor">Profesor/a</option>
-          <option value="Alumno">Alumno/a</option>
-          <option value="Gestor">Gestor/a</option>
+          <option value="prof">Profesor/a</option>
+          <option value="alum">Alumno/a</option>
+          <option value="super">Gestor/a</option>
         </select>
         <input type="submit" value="Sign up" />
       </form>
