@@ -4,6 +4,9 @@ import { redirect } from "next/navigation"
 import { useRouter } from "next/navigation"
 import '../app/globals.css'
 import 'bootstrap/dist/css/bootstrap.css'
+// src/components/NavBar.js
+import React from 'react';
+
 
 export default function Layout() {
   const router = useRouter()
@@ -68,3 +71,21 @@ export default function Layout() {
         </div>
   )
 }
+
+
+const NavBar = () => {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+
