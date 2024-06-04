@@ -1,15 +1,13 @@
 'use client'
 import Link from "next/link"
-import { redirect } from "next/navigation"
-import { useRouter } from "next/navigation"
 import '../app/globals.css'
 import 'bootstrap/dist/css/bootstrap.css'
 // src/components/NavBar.js
 import React from 'react';
 
 
-export default function Layout() {
-  const router = useRouter()
+export default function NavBar({id}) {
+
   return(
     <div className='container'>
           <header className='d-flex flex-wrap flex-row align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom'>
@@ -29,27 +27,27 @@ export default function Layout() {
 
             <ul className='nav col-12 col-md-auto mb-2 justify-content-center mb-md-0'>
               <li>
-                <a href='/' className='nav-link px-2 link-secondary'>
+                <a id="home" href='/' className={`nav-link px-2 ${id=="home"?'link-secondary':''}`}>
                   Home
                 </a>
               </li>
               <li>
-                <a href='/features' className='nav-link px-2'>
-                  Features
+                <a id="servicios" href='/servicios' className={`nav-link px-2 ${id=="servicios"?'link-secondary':''}`}>
+                  Servicios
                 </a>
               </li>
               <li>
-                <a href='/pricing' className='nav-link px-2'>
-                  Pricing
+                <a id="planes" href='/planes' className={`nav-link px-2 ${id=="planes"?'link-secondary':''}`}>
+                  Planes
                 </a>
               </li>
               <li>
-                <a href='/faqs' className='nav-link px-2'>
+                <a id="faqs" href='/faqs' className={`nav-link px-2 ${id=="faqs"?'link-secondary':''}`}>
                   FAQs
                 </a>
               </li>
               <li>
-                <a href='/about' className='nav-link px-2'>
+                <a id="about" href='/about' className={`nav-link px-2 ${id=="about"?'link-secondary':''}`}>
                   About
                 </a>
               </li>
@@ -72,20 +70,5 @@ export default function Layout() {
   )
 }
 
-
-const NavBar = () => {
-  return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
-    </nav>
-  );
-};
 
 

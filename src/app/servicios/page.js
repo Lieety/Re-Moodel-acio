@@ -1,15 +1,11 @@
-'use client'
-// src/App.js
-import React from 'react'
-import './about.css'
-import NavBar from '@/components/NavBar'
+import NavBar from '../../components/NavBar'
 
-const App = () => {
+export default function Features () {
   return (
     <>
-      <NavBar id='about' />
+      <NavBar id='servicios' />
       <div className='about-container'>
-        <h1>About Us</h1>
+        <h1>Servicios</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -34,5 +30,3 @@ const App = () => {
     </>
   )
 }
-
-export default App

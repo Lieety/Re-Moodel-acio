@@ -7,7 +7,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import cookies from "cookie";
 
-export async function POST(request: NextRequest) {
+/*export async function POST(request: NextRequest) {
   try {
     await connectMongoDB();
 
@@ -89,4 +89,4 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
-}
+}*/

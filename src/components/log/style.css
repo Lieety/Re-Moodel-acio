@@ -73,8 +73,8 @@ p {
 
 button {
   border-radius: 20px;
-  border: 1px solid #c31432;
-  color: #cb1b38;
+  border: 1px solid #0d6efd;
+  color: #0d6efd;
   background-color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -86,8 +86,8 @@ button {
 }
 input[type="submit"] {
   border-radius: 20px;
-  border: 1px solid #c31432;
-  background-color: #cb1b38;
+  border: 1px solid #0d6efd;
+  background-color: #0d6efd;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -99,7 +99,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:focus {
-  border: 1px solid #c31432;
+  border: 1px solid #0d6efd;
 }
 
 button:active {
@@ -223,17 +223,24 @@ select {
 }
 
 .overlay {
-  background: #c31432; /* fallback for old browsers */
+  background: #0d6efd; /* fallback for old browsers */
+  background: rgb(17, 88, 193);
+  background: -moz-linear-gradient(
+    150deg,
+    rgba(17, 88, 193, 1) 0%,
+    rgba(187, 86, 107, 1) 75%
+  );
   background: -webkit-linear-gradient(
-    to right,
-    #d22c64,
-    #c31432
-  ); /* Chrome 10-25, Safari 5.1-6 */
+    150deg,
+    rgba(17, 88, 193, 1) 0%,
+    rgba(187, 86, 107, 1) 75%
+  );
   background: linear-gradient(
-    to right,
-    #d22c64,
-    #c31432
-  ); /* for latest Browser*/
+    150deg,
+    rgba(17, 88, 193, 1) 0%,
+    rgba(187, 86, 107, 1) 75%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1158c1",endColorstr="#bb566b",GradientType=1);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;

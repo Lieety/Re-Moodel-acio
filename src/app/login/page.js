@@ -12,8 +12,14 @@ export default function LogIn () {
   const [card, setCard] = useState('')
 
   return (
-    <>
-      <div className={`container ${card}`} id='container'>
+    <div className='relative'>
+      <a href='/'>
+        <span className='rounded-full bg-white px-3 py-2 absolute z-20 -top-3 -right-3 text-blue-600 border border-blue-600'>
+          ✖
+        </span>
+      </a>
+
+      <div className={`container ${card}  z-0`} id='container'>
         <Login />
         <Register />
         <div className='overlay-container'>
@@ -35,6 +41,6 @@ export default function LogIn () {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

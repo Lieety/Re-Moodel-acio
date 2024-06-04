@@ -1,7 +1,7 @@
 import NavBar from '@/components/NavBar'
 
 export const metadata = {
-  title: 'a',
+  title: 'c',
   description: 'a'
 }
 
