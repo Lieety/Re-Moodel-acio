@@ -3,33 +3,63 @@
 import React from 'react'
 import './about.css'
 import NavBar from '@/components/NavBar'
-
+import AboutCard from '@/components/AboutCard'
 const App = () => {
   return (
     <>
       <NavBar id='about' />
-      <div className='about-container'>
-        <h1>About Us</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p>
-          Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras
-          congue gravida justo, et aliquam augue scelerisque et. Donec lectus
-          sem, pulvinar ac urna ac, fermentum iaculis eros. Fusce eget purus
-          eget tortor ultricies fringilla. Duis blandit, metus eu maximus
-          sodales, tortor urna rhoncus erat, et ullamcorper sem ex sed nisl.
-          Vivamus sit amet quam a nisi gravida imperdiet et ut orci. Aliquam
-          ornare mollis mi eget bibendum. Suspendisse congue, tellus a blandit
-          porta, lorem mi cursus dui, quis aliquam sapien metus sit amet risus.
-          Nunc commodo lorem in ipsum maximus fermentum.
-        </p>
+      <h1 className='text-center'>Sobre el proyecto</h1>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-4 p-8'>
+        <div className='grid gap-4'>
+          <AboutCard color='bg-blue-300'>
+            <h2>Porque?</h2>
+            <p>
+              Este proyecto se engloba dentro de un Trabajo de Investigación de
+              tres alumnos de primero de bachillerato del instituto Badalona VII
+              que quieren facilitar el dia a dia de aquellos que rodean la
+              educación
+            </p>
+          </AboutCard>
+          <AboutCard color='bg-cyan-600'>
+            <h1>Hola</h1>
+          </AboutCard>
+          <AboutCard color='bg-orange-600'>
+            <h1>Hola</h1>
+          </AboutCard>
+        </div>
+        <div className='grid gap-4'>
+          <AboutCard color='bg-orange-300'>
+            <h2>Porque?</h2>
+          </AboutCard>
+          <AboutCard color='bg-cyan-600'>
+            <h1>Hola</h1>
+          </AboutCard>
+          <AboutCard color='bg-orange-600'>
+            <h1>Hola</h1>
+          </AboutCard>
+        </div>
+        <div className='grid gap-4'>
+          <AboutCard color='bg-orange-300'>
+            <h2>Porque?</h2>
+          </AboutCard>
+          <AboutCard color='bg-cyan-600'>
+            <h1>Hola</h1>
+          </AboutCard>
+          <AboutCard color='bg-orange-600'>
+            <h1>Hola</h1>
+          </AboutCard>
+        </div>
+        <div className='grid gap-4'>
+          <AboutCard color='bg-orange-300'>
+            <h2>Porque?</h2>
+          </AboutCard>
+          <AboutCard color='bg-cyan-600'>
+            <h1>Hola</h1>
+          </AboutCard>
+          <AboutCard color='bg-orange-600'>
+            <h1>Hola</h1>
+          </AboutCard>
+        </div>
       </div>
     </>
   )
