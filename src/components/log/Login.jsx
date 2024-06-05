@@ -3,24 +3,14 @@ import React, { useState } from 'react'
 import './style.css'
 import { FaRegEyeSlash, FaRegEye, FaFacebook, FaGoogle } from "react-icons/fa";
 import {useForm} from 'react-hook-form'
-import axios from 'axios';
 
 
 export default function Login() {
 
   const { register, handleSubmit, formState: { errors } } = useForm()
 
-  const onSubmit = ({mail, password}) => {
-    axios.post('/api/auth/login', {
-      mail,
-      password
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  const onSubmit = (data) => {
+    console.log(data)
   }
 
   const [showPass, setShowPass] = useState(false);
