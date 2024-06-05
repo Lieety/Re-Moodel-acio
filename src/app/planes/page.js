@@ -13,8 +13,11 @@ export default function Pricing () {
             <PriceCard
               planName='Gratis'
               price={0}
-              services={[1, 2, 3]}
-              notServices={[]}
+              services={['30 alumnes', '1 asignatura', '1 institut/profe']}
+              notServices={[
+                'Comunicació amb families',
+                'Seguiment de assistencia'
+              ]}
             />
             <PriceCard
               planName='Standard'
