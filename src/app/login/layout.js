@@ -1,5 +1,4 @@
 import NavBar from '@/components/NavBar'
-import '@/components/log/style.css'
 
 export const metadata = {
   title: 'b',

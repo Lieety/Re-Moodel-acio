@@ -1,5 +1,5 @@
 'use client'
-
+import '@/components/log/style.css'
 import CardSlider from '@/components/log/CardSlider'
 import Login from '@/components/log/Login'
 import Register from '@/components/log/Register'
