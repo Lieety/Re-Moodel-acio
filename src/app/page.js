@@ -1,11 +1,12 @@
-import NavBar from '@/components/NavBar'
-import './globals.css'
-import '@/app/layout'
+'use client'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
-export default function Home () {
-  return (
-    <>
-      <NavBar id='home' />
-    </>
-  )
+export const Home = () => {
+  const { push } = useRouter()
+
+  useEffect(() => {
+    push('/main')
+  }, [])
+  return <p></p>
 }

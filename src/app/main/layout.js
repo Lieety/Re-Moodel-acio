@@ -1,11 +1,9 @@
-import NavBar from '@/components/NavBar'
-
 export const metadata = {
-  title: 'b',
+  title: 'Main',
   description: 'a'
 }
 
-export default function LoginLayout ({ children }) {
+export default function MainLayout ({ children }) {
   return (
     <html lang='en'>
       <body>{children}</body>
