@@ -1,7 +1,6 @@
 'use client'
 // src/App.js
 import React from 'react'
-import './about.css'
 import NavBar from '@/components/NavBar'
 import AboutCard from '@/components/AboutCard'
 const App = () => {
