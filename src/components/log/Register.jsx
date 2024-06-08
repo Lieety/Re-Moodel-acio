@@ -3,25 +3,14 @@ import React, { useState } from 'react'
 import './style.css'
 import { FaRegEyeSlash, FaRegEye, FaFacebook, FaGoogle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
-import axios from 'axios';
+
 
 
 export default function Register () {
   const { register, handleSubmit, formState: { errors } } = useForm()
 
   const onSubmit = ({name, mail, password, role}) => {
-    axios.post('/api/auth/register', {
-      name,
-      mail,
-      password,
-      role
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    console.log('a')
   }
   const [showPass, setShowPass] = useState(false);
   const [password, setPassword] = useState('');

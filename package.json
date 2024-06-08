@@ -1,40 +1,28 @@
 {
-  "name": "remoodleacio",
-  "version": "0.1.0",
-  "private": true,
+  "name": "remmodelacio2",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "axios": "^1.7.2",
-    "bcryptjs": "^2.4.3",
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/react": "^3.5.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^4.10.1",
+    "astro-bootstrap": "^0.6.2",
     "bootstrap": "^5.3.3",
-    "cookie": "^0.6.0",
-    "express": "^4.19.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.7.0",
-    "mongoose": "^8.4.0",
-    "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-hook-form": "^7.51.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.51.5",
     "react-icons": "^5.2.1",
-    "react-router-dom": "^6.23.1",
-    "resend": "^3.2.0",
-    "zod": "^3.23.8",
-    "zustand": "^4.5.2"
-  },
-  "devDependencies": {
-    "@types/bcryptjs": "^2.4.6",
-    "@types/cookie": "^0.6.0",
-    "@types/jsonwebtoken": "^9.0.6",
-    "@types/react": "18.3.3",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.4.5"
   }
 }

@@ -1,20 +1,18 @@
 'use client'
-import '@/components/log/style.css'
-import CardSlider from '@/components/log/CardSlider'
-import Login from '@/components/log/Login'
-import Register from '@/components/log/Register'
-import { useSearchParams } from 'next/navigation'
+import './style.css'
+import CardSlider from './CardSlider'
+import Login from './Login'
+import Register from './Register'
 import { useState } from 'react'
 
 export default function LogIn () {
-  const searchParams = useSearchParams()
-  const isUser = searchParams.get('isUser')
+
   const [card, setCard] = useState('')
 
   return (
     <>
       <div className='relative'>
-        <a href='/main'>
+        <a href='/'>
           <span className='rounded-full bg-white px-3 py-2 absolute z-20 -top-3 -right-3 text-blue-600 border border-blue-600'>
             ✖
           </span>
