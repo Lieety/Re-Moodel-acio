@@ -1,6 +1,5 @@
 'use client'
 import './style.css'
-import CardSlider from './CardSlider'
 import Login from './Login'
 import Register from './Register'
 import { useState } from 'react'
