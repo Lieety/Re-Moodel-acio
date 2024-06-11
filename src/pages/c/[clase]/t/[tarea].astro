@@ -20,8 +20,8 @@ const { tarea } = Astro.params;
     {
       tareaInfo.map((e) => {
         return (
-          <article class="flex flex-row justify-between  gap-3">
-            <main class="w-3/4">
+          <article class="flex md:flex-row flex-col justify-between gap-3">
+            <main class="md:w-3/4 w-full">
               <h1>{e.name}</h1>
               <section>
                 <span class="">
@@ -37,7 +37,7 @@ const { tarea } = Astro.params;
               <hr />
               <p>{e.description}</p>
             </main>
-            <aside class="w-1/4">
+            <aside class="md:w-1/4 md:full">
               <EntregarTarea
                 isAssigned={true}
                 docs={[
