@@ -1,0 +1,52 @@
+---
+import EntregarTarea from "../../../../components/EntregarTarea.astro";
+import Layout from "../../../../layouts/Layout.astro";
+const tareaInfo = [
+  {
+    name: "Math Task 1",
+    createdBy: "John Doe",
+    description: "Solve the following algebraic equation",
+    dueDate: "2022-10-15",
+    dueHour: "14:00",
+    createdAt: "2022-10-10",
+    updatedAt: "2022-10-12",
+  },
+];
+const { tarea } = Astro.params;
+---
+
+<Layout title={tareaInfo[0].name}>
+  <body>
+    <header>{tarea}</header>
+    {
+      tareaInfo.map((e) => {
+        return (
+          <>
+            <main>
+              <h1>{e.name}</h1>
+              <section>
+                <span class="">
+                  {e.createdBy} · {e.createdAt} (Modified at:
+                  {e.createdAt === e.updatedAt ? "" : e.updatedAt})
+                </span>
+                <span>
+                  {e.dueDate}
+                  {e.dueHour}
+                </span>
+              </section>
+
+              <hr />
+              <p>{e.description}</p>
+            </main>
+            <aside>
+              <EntregarTarea
+                isAssigned={true}
+                docs={[{ name: "documento 1", url: "https://example.com/" }]}
+              />
+            </aside>
+          </>
+        );
+      })
+    }
+  </body>
+</Layout>

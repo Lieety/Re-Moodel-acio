@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './style.css'
 import { FaRegEyeSlash, FaRegEye, FaFacebook, FaGoogle } from "react-icons/fa";
 import { useForm } from "react-hook-form";
@@ -7,9 +7,9 @@ import { useForm } from "react-hook-form";
 
 
 export default function Register () {
-  const { register, handleSubmit, formState: { errors } } = useForm()
+  const { register, handleSubmit } = useForm()
 
-  const onSubmit = ({name, mail, password, role}) => {
+  const onSubmit = () => {
     console.log('a')
   }
   const [showPass, setShowPass] = useState(false);
