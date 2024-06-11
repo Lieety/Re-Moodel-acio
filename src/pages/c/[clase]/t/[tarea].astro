@@ -17,12 +17,11 @@ const { tarea } = Astro.params;
 
 <Layout title={tareaInfo[0].name}>
   <body>
-    <header>{tarea}</header>
     {
       tareaInfo.map((e) => {
         return (
-          <>
-            <main>
+          <article class="flex flex-row justify-between  gap-3">
+            <main class="w-3/4">
               <h1>{e.name}</h1>
               <section>
                 <span class="">
@@ -38,13 +37,19 @@ const { tarea } = Astro.params;
               <hr />
               <p>{e.description}</p>
             </main>
-            <aside>
+            <aside class="w-1/4">
               <EntregarTarea
                 isAssigned={true}
-                docs={[{ name: "documento 1", url: "https://example.com/" }]}
+                docs={[
+                  {
+                    name: "documento 1",
+                    url: "https://example.com/",
+                    type: "Text Document",
+                  },
+                ]}
               />
             </aside>
-          </>
+          </article>
         );
       })
     }

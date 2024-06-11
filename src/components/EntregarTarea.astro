@@ -5,6 +5,7 @@ interface Props {
     {
       name: string;
       url: string;
+      type: string;
     },
   ];
 }
@@ -12,23 +13,37 @@ interface Props {
 const { isAssigned, docs } = Astro.props;
 ---
 
-<div class="flex flex-col items-start a">
-  <section class="flex flex-row justify-between items-center">
-    <h2>Tu trabajo</h2>
-    <h6>{isAssigned ? "Asignada" : "Entregada"}</h6>
+<div class="flex flex-col items-start border-2 shadow-2xl p-4 gap-3 rounded-lg">
+  <section class="flex flex-col justify-between w-full items-center">
+    <span class="flex flex-row justify-between w-full items-center">
+      <h2>Tu trabajo</h2>
+      <h6>{isAssigned ? "Asignada" : "Entregada"}</h6>
+    </span>
+    <hr class="h-1 w-full" />
   </section>
-  <hr />
   {
     docs?.map((e) => {
       return (
-        <h3>
-          <a href={e.url} target="_blank" rel="noopener noreferrer">
+        <a
+          href={e.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="decoration-transparent text-black w-full"
+        >
+          <span class="flex flex-col justify-center gap-1 border-[1px] p-2 border-black rounded-md text-lg">
             {e.name}
-          </a>
-        </h3>
+            <p class="text-xs">{e.type}</p>
+          </span>
+        </a>
       );
     })
   }
-  <button>Añade</button>
-  <button>Entrega</button>
+
+  afri eres tontisima
+  <div class="flex flex-row gap-2">
+    <button class="px-2 py-1 rounded-md bg-blue-600 text-white">Añade</button>
+    <button class="border-2 border-blue-600 px-2 py-1 rounded-md text-blue-600"
+      >Entrega</button
+    >
+  </div>
 </div>
