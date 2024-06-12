@@ -1,15 +1,64 @@
 ---
 import EntregarTarea from "../../../../components/EntregarTarea.astro";
-import Layout from "../../../../layouts/Layout.astro";
-import { db, Tareas } from "astro:db";
-const tareaInfo = await db.select().from(Tareas);
+import ClassLayout from "../../../../layouts/ClassLayout.astro";
+
+import { db, eq, and, Tareas } from "astro:db";
 const { clase, tarea } = Astro.params;
+const tareaInfo = await db
+  .select()
+  .from(Tareas)
+  //@ts-ignore
+  .where(and(eq(Tareas.classId, clase), eq(Tareas.id, tarea)));
+console.log(tareaInfo);
+
+if (tareaInfo.length === 0) {
+  return Astro.redirect("/404");
+}
 ---
 
-<Layout title={tarea ? tarea : ""}>
-  {
-    tareaInfo.map(({ name }: any) => {
-      console.log(name);
-    })
-  }
-</Layout>
+<ClassLayout title="q">
+  <header class="mb-20">
+    <a href=`/c/${clase}` class="decoration-transparent text-black text-3xl"
+      >&#60;</a
+    >
+    <hr />
+  </header>
+  <body>
+    {
+      tareaInfo.map((e: any) => {
+        return (
+          <article class="flex md:flex-row flex-col justify-between gap-3">
+            <main class="md:w-3/4 w-full">
+              <h1>{e.name}</h1>
+              <section>
+                <span class="">
+                  {e.createdBy} · {e.createdAt} (Modified at:
+                  {e.createdAt === e.updatedAt ? "" : e.updatedAt})
+                </span>
+                <span>
+                  {e.dueDate}
+                  {e.dueHour}
+                </span>
+              </section>
+
+              <hr />
+              <p>{e.description}</p>
+            </main>
+            <aside class="md:w-1/4 md:full  ">
+              <EntregarTarea
+                isAssigned={true}
+                docs={[
+                  {
+                    name: "documento 1",
+                    url: "https://example.com/",
+                    type: "Text Document",
+                  },
+                ]}
+              />
+            </aside>
+          </article>
+        );
+      })
+    }
+  </body>
+</ClassLayout>

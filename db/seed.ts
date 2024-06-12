@@ -13,13 +13,13 @@ export default async function seed() {
       id: "2",
       name: "Fisica 2",
       teacher: "Lluis Vidal",
-      classCode: "ab43e7",
+      classCode: "he92hde",
     },
     {
       id: "3",
       name: "Castellano 1",
       teacher: "Ana Luis",
-      classCode: "ab43e7",
+      classCode: "8rh743g8",
     },
   ]);
 
