@@ -8,6 +8,6 @@
       "@api#/*": ["src/api#/*"]
     },
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
   }
 }

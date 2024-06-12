@@ -107,13 +107,13 @@ const tareas = [
 const { clase } = Astro.params;
 ---
 
-<Layout title={clase}>
+<Layout title={clase ? clase : ""}>
   <section class="flex flex-col gap-2">
     {
       tareas.map((tarea) => {
         return (
           <a
-            href={`/t/${tarea.id}`}
+            href={`/c/${clase}/t/${tarea.id}`}
             class="flex flex-col justify-center items-start gap-2 w-full border-black border-[1px] rounded-md text-black text-3xl decoration-transparent px-4 py-2"
           >
             {tarea.name}
