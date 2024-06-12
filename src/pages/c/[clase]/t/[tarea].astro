@@ -12,7 +12,7 @@ const tareaInfo = [
     updatedAt: "2022-10-12",
   },
 ];
-const { tarea } = Astro.params;
+const { classId } = Astro.params;
 ---
 
 <Layout title={tareaInfo[0].name}>
@@ -37,7 +37,7 @@ const { tarea } = Astro.params;
               <hr />
               <p>{e.description}</p>
             </main>
-            <aside class="md:w-1/4 md:full">
+            <aside class="md:w-1/4 md:full  ">
               <EntregarTarea
                 isAssigned={true}
                 docs={[
