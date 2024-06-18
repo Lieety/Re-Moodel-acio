@@ -1,37 +1,8 @@
 ---
 import ClassLayout from "@layouts/ClassLayout.astro";
-
-import { db, eq, and, Tareas } from "astro:db";
 const { clase } = Astro.params;
-//@ts-ignore
-const tareas = await db
-  .select()
-  .from(Tareas)
-  //@ts-ignore
-  .where(eq(Tareas.classId, clase));
-console.log(tareas);
 ---
 
-<ClassLayout title={clase ? clase : ""}>
-  <section class="flex flex-col gap-2">
-    {
-      tareas.map((tarea: any) => {
-        return (
-          <a
-            href={`/c/${clase}/t/${tarea.id}`}
-            class="flex flex-col justify-center items-start gap-2 w-full border-black border-[1px] rounded-md text-black text-3xl decoration-transparent px-4 py-2"
-          >
-            {tarea.name}
-            <span class="text-xs flex flex-row">
-              Fecha de vencimiento:
-              {tarea.dueDate} - {tarea.dueHour}
-            </span>
-            <span class="text-xs flex flex-row">{tarea.createdBy}</span>
-            <hr class="w-full" />
-            <p class="text-base">{tarea.description}</p>
-          </a>
-        );
-      })
-    }
-  </section>
+<ClassLayout title="q">
+  <h1>me cago en la madre que me parió</h1>
 </ClassLayout>
